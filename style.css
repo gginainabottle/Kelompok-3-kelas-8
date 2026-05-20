@@ -1,0 +1,292 @@
+/* Reset Dasar */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    background-color: #020617; /* Deep Navy */
+    color: #f8fafc; /* Silver-ish White */
+    scroll-behavior: smooth;
+}
+
+.container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 0 20px;
+}
+
+/* 1. Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(2, 6, 23, 0.95);
+    padding: 1.5rem 5%;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid #334155;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: #a78bfa; /* Lavender */
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li a {
+    color: #cbd5e1;
+    text-decoration: none;
+    margin-left: 2rem;
+    transition: 0.3s;
+}
+
+.nav-links li a:hover {
+    color: #60a5fa; /* Soft Blue Glow */
+}
+
+/* 2. Hero Section */
+.hero {
+    height: 100vh;
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
+                url('https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?q=80&w=1500') no-repeat center center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.hero-content h1 {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    color: #fff;
+    text-shadow: 0 0 20px #60a5fa;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    color: #cbd5e1;
+}
+
+.btn {
+    padding: 12px 30px;
+    background: #7c3aed; /* Midnight Purple */
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+    transition: 0.3s;
+    box-shadow: 0 4px 15px rgba(124, 58, 237, 0.4);
+}
+
+.btn:hover {
+    background: #a78bfa;
+    transform: translateY(-3px);
+}
+
+/* 3. About & Lineup */
+section {
+    padding: 100px 20px;
+    text-align: center;
+}
+
+.lineup {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 3rem;
+    flex-wrap: wrap;
+}
+
+.day-card {
+    background: #1e1b4b; /* Dark Midnight Purple */
+    padding: 30px;
+    border-radius: 15px;
+    width: 300px;
+    border: 1px solid #4338ca;
+}
+
+.day-card h3 {
+    margin-bottom: 15px;
+    color: #60a5fa;
+}
+
+.day-card ul {
+    list-style: none;
+}
+
+.day-card ul li {
+    font-size: 1.2rem;
+    padding: 5px 0;
+}
+
+/* 4. Gallery */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.img-box {
+    height: 250px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    transition: 0.4s;
+    filter: grayscale(40%);
+}
+
+.img-box:hover {
+    filter: grayscale(0%);
+    transform: scale(1.02);
+}
+
+/* 5. Video */
+.video-container {
+    max-width: 800px;
+    margin: 30px auto;
+}
+
+.video-container iframe {
+    width: 100%;
+    border-radius: 15px;
+    border: 2px solid #334155;
+}
+
+/* 6. Table */
+table {
+    width: 100%;
+    max-width: 800px;
+    margin: 30px auto;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 15px;
+    border-bottom: 1px solid #334155;
+    text-align: left;
+}
+
+th {
+    background-color: #1e293b;
+    color: #a78bfa;
+}
+
+/* 7. Contact */
+.contact-info p {
+    font-size: 1.1rem;
+    margin: 10px 0;
+}
+
+/* 8. Footer */
+footer {
+    background: #0f172a;
+    padding: 20px;
+    text-align: center;
+    border-top: 1px solid #334155;
+    font-size: 0.9rem;
+    color: #94a3b8;
+}
+
+/* Responsif untuk HP */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none; /* Menyederhanakan untuk versi mobile */
+    }
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+}
+
+html {
+    /* Ini adalah kunci utama scroll halus tanpa ribet */
+    scroll-behavior: smooth;
+}
+
+/* Memberikan jarak agar saat scroll, judul section tidak tertutup navbar */
+section {
+    scroll-margin-top: 80px; 
+    padding: 100px 20px;
+}
+/* --- Section Members --- */
+.members {
+    background-color: #0f172a; /* Warna background deep navy yang sedikit berbeda agar kontras */
+}
+
+.members-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 25px;
+    margin-top: 40px;
+}
+
+.member-card {
+    background: #1e293b;
+    border-radius: 20px;
+    overflow: hidden;
+    transition: 0.3s ease;
+    border: 1px solid #334155;
+    text-align: center;
+}
+
+/* Efek saat card disorot (hover) */
+.member-card:hover {
+    transform: translateY(-10px);
+    border-color: #a78bfa; /* Menyala warna lavender */
+    box-shadow: 0 10px 20px rgba(167, 139, 250, 0.2);
+}
+
+.member-img {
+    height: 250px;
+    background-size: cover;
+    background-position: center;
+}
+
+.member-info {
+    padding: 20px;
+}
+
+.member-info h3 {
+    color: #f8fafc;
+    margin-bottom: 5px;
+    font-size: 1.4rem;
+}
+
+.member-info span {
+    color: #a78bfa; /* Soft lavender untuk jabatan/role */
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+/* --- Ticket Button Style --- */
+.btn-buy {
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: #7c3aed; /* Midnight Purple */
+    color: #fff;
+    text-decoration: none;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 10px rgba(124, 58, 237, 0.3);
+}
+
+.btn-buy:hover {
+    background-color: #a78bfa; /* Lavender */
+    box-shadow: 0 0 15px #a78bfa; /* Glow Effect */
+    transform: translateY(-2px);
+}
